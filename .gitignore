@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# 环境与密钥
+.env
+*.key
+
+# 运行产物
+outputs/
+runs/
+*.log
+
+# 数据文件（不入库，防泄密）
+*.xlsx
+*.xls
+*.csv
+!data/demo/*.csv
+
+# IDE / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
