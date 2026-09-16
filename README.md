@@ -36,14 +36,20 @@
    名单 Excel + 评估图表 + Markdown 分析报告（全程版本快照）
 ```
 
-## 🚀 快速开始
+## 🚀 快速开始（M1）
 
 ```bash
 git clone https://github.com/5527sy/data-flow-agent.git
 cd data-flow-agent
 pip install -r requirements.txt
-python -m app    # 敬请期待，项目起步中
+
+uvicorn app.main:app --port 8000
+# 浏览器打开 http://127.0.0.1:8000
 ```
+
+M1 已实现：卡片①需求路由（规则+LLM 双通道判定，低置信度自动澄清）+ 卡片②占位。
+可选：设置 `DEEPSEEK_API_KEY` / `DEEPSEEK_BASE_URL` / `DEEPSEEK_MODEL` 后启用真实 LLM 通道；
+未设置时自动走规则通道（Mock 模式），流程照样跑通。
 
 ## 📌 路线图
 

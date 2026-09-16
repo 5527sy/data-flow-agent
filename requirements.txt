@@ -1,8 +1,9 @@
 # DataFlow Agent 依赖（按里程碑逐步启用）
 # ── 应用层（M1）──
+langgraph>=0.2          # 状态图编排：interrupt 拍板 / checkpointer 快照
+langchain-openai>=0.2   # ChatOpenAI 连 DeepSeek（OpenAI 兼容协议）
 fastapi>=0.115
 uvicorn[standard]>=0.30
-openai>=1.40            # DeepSeek（OpenAI 兼容协议）
 pydantic>=2.9           # 结构化输出"合同"
 PyYAML>=6.0
 jinja2>=3.1             # 卡片/提示词模板

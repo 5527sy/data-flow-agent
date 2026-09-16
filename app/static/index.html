@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataFlow Agent · 卡片式向导</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>🏦 DataFlow Agent</h1>
+    <p class="slogan">机器负责算和画，人负责拍板和签字</p>
+  </header>
+
+  <!-- 步骤导航条 -->
+  <nav class="stepper" id="stepper"></nav>
+
+  <!-- 卡片舞台 -->
+  <main id="cardStage">
+    <!-- 卡片①：需求路由 -->
+    <section class="card" id="card1">
+      <h2>① 需求路由 <span class="tag">Agent 范式判定</span></h2>
+      <p class="hint">用一句自然语言描述分析需求，系统将用「规则 + LLM」双通道判定属于哪类分析范式。</p>
+      <textarea id="reqInput" rows="3"
+        placeholder="例：根据现有的使用公积金服务用户特征，找出潜在的开通服务名单"></textarea>
+      <div class="row">
+        <button id="sendBtn" class="primary">提交需求</button>
+        <span id="loading" class="hidden">⚙️ 分析中…</span>
+      </div>
+
+      <!-- 判定结果卡片 -->
+      <div id="decisionBox" class="hidden"></div>
+    </section>
+
+    <!-- 卡片②：样本设计（占位） -->
+    <section class="card" id="card2">
+      <h2>② 样本设计 <span class="tag">M1 占位</span></h2>
+      <p id="card2Text" class="hint"></p>
+      <div class="row">
+        <button id="backBtn">← 回到需求路由</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    DataFlow Agent · M1 ｜ <span id="connState">…</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
